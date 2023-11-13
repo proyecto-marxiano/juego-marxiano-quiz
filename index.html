@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://kit.fontawesome.com/ccee9ace0a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Juego Marxiano - Capital Quiz</title>
+</head>
+<body>
+    <header>
+        <h1>Juego Marxiano - Capital Quiz</h1>
+    </header>
+    
+    <div id="game-container">
+        <div id="question-container">
+            <h2 id="question">Pregunta</h2>
+        </div>
+        <div id="options-container">
+        </div>
+        <button id="next-btn" onclick="nextQuestion()">Siguiente Pregunta</button>
+        <div id="score-container">Puntaje: <span id="score">0</span></div>
+        <div id="timer-container"><span id="timer">60 seg</span></div>
+    </div>
+    
+    <div id="final-screen" class="hidden">
+        <h2>¡Has terminado el juego!</h2>
+        <p id="final-score">Puntaje: <span id="final-score-value">0</span></p>
+        <p>Gracias por jugar al Juego Marxiano - Capital Quiz.</p>
+        <p>Creado por: <button class="instagram-btn" onclick="redirectToInstagram('https://www.instagram.com/ezekqz/')"><i class="fab fa-instagram"></i> Ezequiel Ponce</button></p>
+        <p>Creado por: <button class="instagram-btn" onclick="redirectToInstagram('https://www.instagram.com/otro_instagram/')"><i class="fab fa-instagram"></i> Santiago Moreno</button></p>
+        <p>Creado por: <button class="instagram-btn" onclick="redirectToInstagram('https://www.instagram.com/otro_instagram/')"><i class="fab fa-instagram"></i> Renzo Vargas</button></p> 
+        <button id="play-again-btn" onclick="restartGame()">Jugar de Vuelta</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
