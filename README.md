@@ -11,13 +11,6 @@ Características Destacadas:
 🏆 Sistema de puntuación para evaluar tu conocimiento marxista.
 🔄 Actualizado con nuevas funciones y mejoras en la versión 2.0.
 🎓 Ideal para estudiantes de Sociología y entusiastas de la teoría crítica.
-Novedades en la Versión 2.0:
-
-✨ Diseño renovado para una experiencia visual mejorada.
-🖼️ Agregada animación de Marx en el encabezado.
-📣 Comparte tus logros en redes sociales con botones dedicados.
-🔄 Correcciones de errores y optimizaciones.
-¡Demuestra tu comprensión del análisis crítico de Marx sobre el sistema capitalista!
 
 [¡Juega Ahora!](https://juego-marxiano.netlify.app/)
 
