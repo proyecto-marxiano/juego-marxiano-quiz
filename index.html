@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="https://i.ibb.co/FYbMvyk/marx-icon.webp" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ccee9ace0a.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Juego Marxiano - Capital Quiz</title>
@@ -12,8 +13,26 @@
 <body>
     <header>
         <h1>Juego Marxiano - Capital Quiz</h1>
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmU3anFxdWl5eHRoZ2tvNjN3N2s4cXZ6emFkbWZycW1jMWxxejBuayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/huDOxdi1Ky0GNMPNRI/giphy.gif" alt="Karl Marx Animado" id="animated-marx">
     </header>
     
+    <div id="faq-container">
+        <h1>Preguntas Frecuentes</h1>
+        <div class="faq-card" id="faq-card-1">
+            <p>¿Cuál es el propósito de este juego?</p>
+            <p>El propósito fundamental de este juego, denominado "Juego Marxiano - Capital Quiz", es proporcionar una experiencia educativa y entretenida relacionada con el libro "El Capital" de Karl Marx. Este proyecto se concibió como una herramienta de estudio interactiva, especialmente diseñada para aquellos que están explorando los principios fundamentales de la teoría económica y social marxista.</p>
+            <br />
+            <p>El juego presenta una serie de preguntas cuidadosamente seleccionadas que abordan temas clave tratados por Marx en su obra maestra "El Capital". Al responder a estas preguntas, los participantes no solo tienen la oportunidad de poner a prueba sus conocimientos sobre la teoría marxista, sino también de profundizar en los conceptos esenciales que Marx desarrolla a lo largo de su obra.</p>
+        </div>
+        <div class="faq-card" id="faq-card-2">
+            <p>¿Cómo se puntúa en el juego?</p>
+            <p>En el juego, acumulas puntos al responder correctamente a las preguntas relacionadas con el libro "El Capital" de Karl Marx. Cada vez que seleccionas la respuesta correcta, tu puntuación se incrementa. Sin embargo, ten en cuenta que las respuestas incorrectas no afectan negativamente tu puntuación.</p>
+            <br />
+            <p>Al final del juego, tu puntuación total se mostrará en la pantalla final. Este puntaje refleja tu comprensión de los conceptos marxistas abordados en las preguntas. ¡Demuestra tu conocimiento y disfruta explorando el análisis crítico de Marx sobre el sistema capitalista!</p>
+        </div>
+        <button id="close-and-play-btn" onclick="startGameFromFAQ()">Cerrar y Jugar</button>
+    </div>
+
     <div id="game-container">
         <div id="question-container">
             <h2 id="question">Pregunta</h2>
@@ -22,7 +41,6 @@
         </div>
         <button id="next-btn" onclick="nextQuestion()">Siguiente Pregunta</button>
         <div id="score-container">Puntaje: <span id="score">0</span></div>
-        <div id="timer-container"><span id="timer">60 seg</span></div>
     </div>
     
     <div id="final-screen" class="hidden">
@@ -30,9 +48,18 @@
         <p id="final-score">Puntaje: <span id="final-score-value">0</span></p>
         <p>Gracias por jugar al Juego Marxiano - Capital Quiz.</p>
         <p>Creado por: <button class="instagram-btn" onclick="redirectToInstagram('https://www.instagram.com/ezekqz/')"><i class="fab fa-instagram"></i> Ezequiel Ponce</button></p>
-        <p>Creado por: <button class="instagram-btn" onclick="redirectToInstagram('https://www.instagram.com/otro_instagram/')"><i class="fab fa-instagram"></i> Santiago Moreno</button></p>
-        <p>Creado por: <button class="instagram-btn" onclick="redirectToInstagram('https://www.instagram.com/otro_instagram/')"><i class="fab fa-instagram"></i> Renzo Vargas</button></p> 
-        <button id="play-again-btn" onclick="restartGame()">Jugar de Vuelta</button>
+        <p>Creado por: <button class="instagram-btn" onclick="redirectToInstagram('https://www.instagram.com/santiimoreno18/')"><i class="fab fa-instagram"></i> Santiago Moreno</button></p>
+        <p>Creado por: <button class="instagram-btn" onclick="redirectToInstagram('https://www.instagram.com/renzoo_vargas/')"><i class="fab fa-instagram"></i> Renzo Vargas</button></p> 
+        <button id="share-whatsapp-btn" onclick="shareOnWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Compartir en WhatsApp
+        </button>        
+        <button id="share-twitter-btn" onclick="shareOnTwitter()">
+            <i class="fab fa-twitter"></i> Compartir en Twitter
+        </button>
+        <p>Encuentra el código en nuestro repositorio de GitHub:</p>
+        <a href="https://github.com/proyecto-marxiano/juego-marxiano-quiz" target="_blank" rel="noopener noreferrer">
+        <button id="github-btn"><i class="fab fa-github"></i> Ver en GitHub</button>
+        <button id="play-again-btn" onclick="restartGame(event)">Jugar de Vuelta</button>
     </div>
 
     <script src="app.js"></script>
